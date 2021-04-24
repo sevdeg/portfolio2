@@ -6,5 +6,10 @@ def index():
     return render_template('index.html')
     #return ("hello world")
 
+@app.route('/kontakt')
+def kontaktOss():
+    return render_template('kontaktOss.html')
+    #return ("hello world")
+
 if __name__ == '__main__':
     app.run(debug=True)
