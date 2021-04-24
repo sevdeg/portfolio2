@@ -1,7 +1,13 @@
 .navbar-custom {
-    background-color: #ff5500;
+    background-color: #161718;
 }
 
 .navbar-custom .navbar-text {
-    color: rgba(255,255,255,.8);
+    color: rgba(255, 255, 255, 0.8);
+}
+.px-2{
+    right:auto; 
+}
+#overskrift{
+    right: 100px;
 }
