@@ -5,3 +5,13 @@
 .navbar-custom .navbar-text {
     color: rgba(255,255,255,.8);
 }
+
+/* visited link */
+a:visited {
+    color: green;
+}
+  
+/* mouse over link */
+a:hover {
+    color: red;
+}
