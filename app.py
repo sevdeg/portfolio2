@@ -11,6 +11,22 @@ def kontaktOss():
     return render_template('kontaktOss.html')
     #return ("hello world")
 
+@app.route('/checkout')
+def checkout():
+    return render_template('checkout.html')
+    #return ("hello world")
+
+@app.route('/shoppingcart')
+def shoppingcart():
+    return render_template('handlekurv.html')
+    #return ("hello world")
+
+@app.route('/test')
+def test():
+    return render_template('test.html')
+    #return ("hello world")
+
+
 @app.route('/login')
 def login():
     return render_template('loggInn.html')
