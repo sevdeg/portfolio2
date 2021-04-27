@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Kasse</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    </head>
+    <body class = "bg-light">
+
+        <div class="container">
+            <div class="py-5 text-center">
+                <h2>Kasse</h2>
+            </div>
+
+        </div>
+        <div class="container">
+            <h4 class="mb-3">LEVERINGADRESS</h4>
+            <form novalidate>
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <label for="fornavn"
+                        class="form-label">Fornavn</label>
+                        <input id="fornavn" type="text"
+                        class="form-control" required>
+                        <div class="invalid-feedback">
+                            ugyldig navn
+
+                        </div>
+                    </div>
+                        <div class="col-sm-6">
+                            <label for="etternavn"
+                            class="form-label">Etternavn</label>
+                            <input id="etternavn" type="text"
+                            class="form-control" required>
+                            <div class="invalid-feedback">
+                                ugyldig navn
+
+                            </div>
+                        </div>
+                    <div class="col-6">
+                        <label for="telefonnummer" class="form-label">Telefonnummer</label>
+                        <input id="telefonnummer" type="text" class="form-control" required>
+                        <div class="invalid-feedback">
+                            ugyldig nummer
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <label for="Gate og husnummer" class="form-label">Gate og husnummer</label>
+                    <input id="Gate og husnummer" type="text" class="form-control" required>
+                    <div class="invalid-feedback">
+                        skriv inn gate og husnummer
+
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col-sm-3">
+                        <label for="Sted"
+                               class="form-label">Sted</label>
+                        <input id="Sted" type="text"
+                               class="form-control" required>
+                        <div class="invalid-feedback">
+                            skriv inn by
+
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="postnummer"
+                               class="form-label">postnummer</label>
+                        <input id="postnummer" type="text"
+                               class="form-control" required>
+                        <div class="invalid-feedback">
+                            skriv inn postnummer
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-2">
+                    <label for="Land" class="form-label">Land</label>
+                    <select id="Land"  class="form-control" required>
+                        <option value="">Velg...</option>
+                        <option value="Danmark">Danmark</option>
+                        <option value="Finland">Finland</option>
+                        <option value="Norge">Norge</option>
+                        <option value="Sverige">Sverige</option>
+                        <option value="Polen">Polen</option>
+                        <option value="UK">UK</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        velg land
+
+                    </div>
+                </div>
+                <hr class="my-4">
+                <div class="col-12">
+                    <div class="form-check">
+                        <input id="sammeadress" type="checkbox" class="form-check-input">
+                        <label class="form-check-label" for="sammeadress">Leveringadress er samme som faktura adress</label>
+                    </div>
+                </div>
+                <hr class="my-4">
+                <h4 class="mb-3">Betaling metoder</h4>
+                <div class="form-check">
+                    <input id="kreditkort" name="paymentmetoder" type="radio" class="form-check-input" checked required>
+                    <label for="kreditkort">kredittkort</label>
+                </div>
+                <div class="form-check">
+                    <input id="betalingkort" name="paymentmetoder" type="radio" class="form-check-input" checked required>
+                    <label for="betalingkort">betalingkort</label>
+                </div>
+                <div class="form-check">
+                    <input id="paypal" name="paymentmetoder" type="radio" class="form-check-input" checked required>
+                    <label for="paypal">Paypal</label>
+                </div>
+                <div class="row my-3 gy-3">
+                    <div class="col-md-6">
+                        <label for="name" class="form-label">
+                            Navn på kort
+                        </label>
+                        <input id="name" type="text" class="form-control">
+                        <div class="invalid-feedback">
+                            Navn på kort må skrives inn
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="kortnummer" class="form-label">
+                            kortnummer
+                        </label>
+                        <input id="kortnummer" type="text" class="form-control">
+                        <div class="invalid-feedback">
+                             kortnummer må skrives inn
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="gyldighet" class="form-label">
+                            Gyldighet
+                        </label>
+                        <input id="gyldighet" type="text" class="form-control">
+                        <div class="invalid-feedback">
+                           Gyldihet på kort må skrives inn
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="cvv" class="form-label">
+                            CVV
+                        </label>
+                        <input id="cvv" type="text" class="form-control">
+                        <div class="invalid-feedback">
+                            CVV på kort må skrives inn
+
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-4">
+                <button class="btn btn-primary btn-lg btn-block">Betal</button>
+            </form>
+        </div>
+
+
+
+
+
+
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+
+</body>
+</html>
