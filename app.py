@@ -16,9 +16,9 @@ def checkout():
     return render_template('checkout.html')
     #return ("hello world")
 
-@app.route('/shoppingcart')
+@app.route('/shoppingCart')
 def shoppingcart():
-    return render_template('handlekurv.html')
+    return render_template('shoppingCart.html')
     #return ("hello world")
 
 @app.route('/test')
