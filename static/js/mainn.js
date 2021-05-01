@@ -118,7 +118,7 @@ function visHandlekurv(){
                 <tr class="product">
                     <td>
                         <ion-icon name="basket"></ion-icon>
-                        <img src="card1.jpg">
+                        <img src="card.jpg">
                         <span>${item.name} </span>
                     </td>
                     <td class="price">${item.price},00 kr</td>
@@ -128,7 +128,7 @@ function visHandlekurv(){
                 </tr> 
                 `
             });
-                productContainer.innerHTML += `
+            productContainer.innerHTML += `
                 <div>
                 <h4 class="basketTotalTitle">
                     Total:
