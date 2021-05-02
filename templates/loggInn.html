@@ -16,7 +16,6 @@
          <style>
             body {background-color:white}
             /* visited link */
-           
             .navbar-nav .nav-item .nav-link {
                 color: inherit;
             }
@@ -26,6 +25,9 @@
             .navbar-nav .nav-item.visited .nav-link,
             .navbar-nav .nav-item:hover .nav-link {
                 color: #ffbd00;
+            }
+            .dropdown-menu{
+                background-color: red;
             }
             .contact-form{
                 margin-top: 100px;
@@ -40,34 +42,27 @@
 
         </style>
     </head>
-    <body>
- 
-        <!-- HEADER -->
-        <header>
-            
+<body>
+    <header>
             <!-- FIRST PIECE -->
             <div class="salgsbanner" style="margin-bottom: 0px; background-color: #ffbd00; padding:2px;">
-                <h5 style="text-align: center;">SENSORSSALG! 100% PÅ ALLE PRODUKTER, BRUK KODE: SENSOR100</h5>
+                <h5 style="text-align: center;">Welcome to our webshop!</h5>
             </div>
-            
             <!-- SECOND PIECE -->
             <div class="container">
                 <div class="row">  
-                    <div class="col-md-4 col-sm-12 col-12" style="padding:45px;">
-                        <h4>Welcome to our webshop!</h4>
+                    <div class="col-md-4 col-sm-12 col-12">
+                        <h2 class="my-md-3 site-title" > <img src="static/logow.png" width="300" height="90"/> </h2>
                         <!-- <button class="btn"><i class="fa fa-bars"></i>hehe</button> -->
-                    </div>
-                    <div class="col-md-4 col-12 text-center">
-                        <h2 class="my-md-3 site-title" > <img src="static/logow.png" width="400" height="90"/> </h2>
                     </div>
                     <div class="col-md-4 col-12 text-right">
                         <p class="my-md-4 header-links">
                             <!-- IKONEEEER -->
-                            <a href="" data-toggle="modal" data-target="#loginModal"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                            <a href="/login" style="color:black;"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                                 <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                             </svg>Logg inn/ Registrer deg</a>
                             <li class="cart">
-                                <a href="/shoppingCart">
+                                <a href="/shoppingcart" style="color:black;">
                                     <ion-icon name="basket"></ion-icon>Cart<span>0</span>
                                 </a>
                             </li>
@@ -76,110 +71,110 @@
 
                 </div>
             </div>
-
-            <nav class="navbar navbar-expand-md navbar-light bg-light">
-                
-                <ul class="navbar-nav" style="padding-left:20px;">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Company</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="kontakt">Customer service</a>
-                    </li>
-                </ul>
+            <!--navbar-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <h4>Navbar</h4>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="">Company</a>
+                    <a class="nav-item nav-link" href="kontakt">Customer Service</a>
+                    
+                </div>
+                </div>
             </nav>
-        </header>
+    </header>
 
-        <main>
-            <div class="container contact-form" style="width: 100%;">
-                <div class="row">  
-                    <div class="col-md-6 col-sm-12 col-12" style="padding:45px;">
-                        <h1 style="text-align: center; font-weight: bold;">Innlogging</h1>
-                        <p style="text-align: center; margin-top: 40px; color:inherit;">Hvis du har en konto hos oss, vennligst logg inn.</p>
-                        <hr>
-                        <form name="contactform" method="post" class="needs-validation" novalidate-id="forms"> 
-                            <!-- Navn -->
-                            <div class="form-group row" style="margin-bottom: 5px;">
+    <main>
+        <div class="container contact-form" style="width: 100%;">
+            <div class="row">  
+                <div class="col-md-6 col-sm-12 col-12" style="padding:45px;">
+                    <h1 style="text-align: center; font-weight: bold;">Innlogging</h1>
+                    <p style="text-align: center; margin-top: 40px; color:inherit;">Hvis du har en konto hos oss, vennligst logg inn.</p>
+                    <hr>
+                    <form name="contactform" method="post" class="needs-validation" novalidate-id="forms"> 
+                        <!-- Navn -->
+                        <div class="form-group row" style="margin-bottom: 5px;">
                                 
-                                <div class="col-md-10">
-                                    <label style="color: inherit; font-weight: bold;">Name</label>
-                                    <input name="fname" type="text" class="form-control" id="inpName" autocomplete="off" required="" placeholder="Suhail">
+                            <div class="col-md-10">
+                                <label style="color: inherit; font-weight: bold;">Name</label>
+                                <input name="fname" type="text" class="form-control" id="inpName" autocomplete="off" required="" placeholder="Suhail">
                                 
-                                </div>
                             </div>
+                        </div>
                             
                             <!-- Email -->
-                            <div class="form-group row">
+                        <div class="form-group row">
                                
-                                <div class="col-sm-10" style="margin-top: 40px;">
-                                    <label style="color: inherit; font-weight: bold;">Email</label>
-                                    <input name="email" type="email" class="form-control" placeholde="blabla@blabla.com" id="inpEmail" autocomplete="off" required="" placeholder="blabla@hotmail.com"><br>
-                                    <button type="submit" class="btn col-sm-6" style="margin-top: 10px; background-color: #ffbd00; color:inherit; font-weight: bold;">
+                            <div class="col-sm-10" style="margin-top: 40px;">
+                                <label style="color: inherit; font-weight: bold;">Email</label>
+                                <input name="email" type="email" class="form-control" placeholde="blabla@blabla.com" id="inpEmail" autocomplete="off" required="" placeholder="blabla@hotmail.com"><br>
+                                <button type="submit" class="btn col-sm-6" style="margin-top: 10px; background-color: #ffbd00; color:inherit; font-weight: bold;">
                                         Logg inn
-                                    </button>
-                                    <a href="" style="margin-left: 65px; color: inherit;"><label>Forgot your password?</label> </a>
+                                </button>
+                                <a href="" style="margin-left: 65px; color: inherit;"><label>Forgot your password?</label> </a>
                                 
-                                </div>
+                            </div>
                             </div> 
-                        </form> 
-                    </div>
+                    </form> 
+                </div>
 
 
 
 
-                    <div class="col-md-6 col-sm-12 col-12 text-right" style="padding:45px;">
-                        <h1 style="text-align: center; font-weight: bold;">Nye kunder</h1>
-                        <p style="text-align: center; margin-top: 40px; color:inherit;">Ved å opprette en konto i butikken vår, vil du kunne gå raskere gjennom kassen, lagre flere leveringsadresser, se og spore dine bestillinger i kontoen din og mer.</p>
-                        <button type="submit" class="btn col-sm-6" style="margin-top: 210px; background-color: #ffbd00; color:inherit; font-weight: bold;">
-                            Lag konto
-                        </button>
-                    </div>
+                <div class="col-md-6 col-sm-12 col-12 text-right" style="padding:45px;">
+                    <h1 style="text-align: center; font-weight: bold;">Nye kunder</h1>
+                    <p style="text-align: center; margin-top: 40px; color:inherit;">Ved å opprette en konto i butikken vår, vil du kunne gå raskere gjennom kassen, lagre flere leveringsadresser, se og spore dine bestillinger i kontoen din og mer.</p>
+                    <button type="submit" class="btn col-sm-6" style="margin-top: 210px; background-color: #ffbd00; color:inherit; font-weight: bold;">
+                        Lag konto
+                    </button>
+                </div>
                   
 
-                </div>
             </div>
+        </div>
             
 
 
-        </main>
+    </main>
 
 
-        <footer class="bg-light text-center text-lg-start" style="margin-top:5%;">
-            <!-- Grid container -->
-            <div class="container p-4 pb-0">
-              <form action="">
-                <!--Grid row-->
+    <footer class="bg-light text-center text-lg-start" style="margin-top:5%;">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <form action="">
+            <!--Grid row-->
                 <div class="row">
-                  <!--Grid column-->
-                  <div class="col-auto mb-4 mb-md-0">
-                    <p class="pt-2"><strong>Sign up for our newsletter</strong></p>
-                  </div>
-                  <!--Grid column-->
-          
-                  <!--Grid column-->
-                  <div class="col-md-5 col-12 mb-4 mb-md-0">
-                    <!-- Email input -->
-                    <div class="form-outline mb-4">
-                      <input type="email" id="form5Example2" class="form-control" />
+                    <!--Grid column-->
+                    <div class="col-auto mb-4 mb-md-0">
+                        <p class="pt-2"><strong>Sign up for our newsletter</strong></p>
                     </div>
-                  </div>
-                  <!--Grid column-->
-          
-                  <!--Grid column-->
-                  <div class="col-auto mb-4 mb-md-0">
-                    <!-- Submit button -->
-                    <button type="submit" class="btn btn-primary mb-4">
-                      Subscribe
-                    </button>
-                  </div>
-                  <!--Grid column-->
+                    <!--Grid column-->
+            
+                    <!--Grid column-->
+                    <div class="col-md-5 col-12 mb-4 mb-md-0">
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <input type="email" id="form5Example2" class="form-control" />
+                        </div>
+                    </div>
+                    <!--Grid column-->
+            
+                    <!--Grid column-->
+                    <div class="col-auto mb-4 mb-md-0">
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary mb-4">
+                        Subscribe
+                        </button>
+                    </div>
+                    <!--Grid column-->
                 </div>
                 <!--Grid row-->
-              </form>
-            </div>
+            </form>
+        </div>
             <!-- Grid container -->
           
             <!-- Copyright -->
@@ -188,9 +183,10 @@
               <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
             </div>
             <!-- Copyright -->
-         </footer>
+    </footer>
        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script> 
        <script type="text/javascript" src="js/boostrap.js></script"></script>
        <script src="{{ url_for('static', filename='js/mainn.js')}}"></script>
-       </body>
+       <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</body>
 </html>

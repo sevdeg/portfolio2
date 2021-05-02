@@ -6,20 +6,27 @@ let products = [
     {
         name: 'bilde1',
         tag: 'tag1',
-        price: 15,
+        price: 1000,
         inCart: 0
     },
     {
         name: 'bilde2',
         tag: 'tag2',
-        price: 20,
+        price: 1500,
         inCart: 0
     },
 
     {
         name: 'bilde3',
         tag: 'tag3',
-        price: 10,
+        price: 300,
+        inCart: 0
+    },
+
+    {
+        name: 'bilde4',
+        tag: 'tag4',
+        price: 440,
         inCart: 0
     },
 ]; 
@@ -145,16 +152,3 @@ function visHandlekurv(){
 
 oppdaterHandlekurv();
 visHandlekurv();
-
-
-
-
-
-
-
-
-
-
-
-
-

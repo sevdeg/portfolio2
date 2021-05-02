@@ -24,56 +24,75 @@
             .dropdown-menu{
                 background-color: red;
             }
+
+            /* Three image containers (use 25% for four, and 50% for two, etc) */
+            .column {
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+            }
+
+            /* Clear floats after image containers */
+            .row::after {
+            content: "";
+            clear: both;
+            display: table;
+            }
         </style>
     </head>
     <body>
         <!-- HEADER -->
         <header>
-            <!-- FIRST PIECE -->
+             <!-- FIRST PIECE -->
             <div class="salgsbanner" style="margin-bottom: 0px; background-color: #ffbd00; padding:2px;">
-                <h5 style="text-align: center;">20% ON ALL PRODUCTS</h5>
+                <h5 style="text-align: center;">Welcome to our webshop!</h5>
             </div>
             <!-- SECOND PIECE -->
             <div class="container">
                 <div class="row">  
-                    <div class="col-md-4 col-sm-12 col-12" style="padding:45px;">
-                        <h4>Welcome to our webshop!</h4>
-                        <!-- <button class="btn"><i class="fa fa-bars"></i>hehe</button> -->
+                    <div class="col-4">
+                         <img src="static/logow.png" width="300" height="90"/> 
+                        <!-- <button class="btn"><i class="fa fa-bars"></i>hehe</button>  -->
                     </div>
-                    <div class="col-md-4 col-12 text-center">
-                        <h2 class="my-md-3 site-title" > <img src="static/logow.png" width="400" height="90"/> </h2>
-                    </div>
-                    <div class="col-md-4 col-12 text-right">
-                        <p class="my-md-4 header-links">
-                            <!-- IKONEEEER -->
-                            <a href="/login"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                            </svg>Logg inn/ Registrer deg</a>
-                            <li class="cart">
-                                <a href="/shoppingCart">
-                                    <ion-icon name="basket"></ion-icon>Cart<span>0</span>
-                                </a>
-                            </li>
-                        </p>
+
+
+
+                    <div class="col-4 offset-4"> 
+                        <!-- <p class="my-md-6 header-links"></p> -->
+                        <!-- IKONEEEER -->
+                        
+                        <a href="/login" style="color:black;"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        </svg>Logg inn/ Registrer deg</a> 
+
+
+                        
+                        <div class="cart offset-7">
+                            <a href="/shoppingCart"><button>
+                                <ion-icon name="basket"></ion-icon>Cart<span>0</span>
+                            </button></a>
+                        </div>
+                        
                     </div>
 
                 </div>
             </div>
 
-            <nav class="navbar navbar-expand-md navbar-light bg-light">
-                
-                <ul class="navbar-nav" style="padding-left:20px;">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Company</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="kontakt">Customer service</a>
-                    </li>
-                </ul>
-            </nav>
+            <!--navbar-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <h4>Navbar</h4>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="">Company</a>
+                    <a class="nav-item nav-link" href="kontakt">Customer Service</a>
+                    
+                  </div>
+                </div>
+              </nav>
         </header>
         
         <main>
@@ -82,24 +101,38 @@
 
               <div class="container">
                 <div class="row text-center"> 
-                    <h3>Cardio Machines</h3> 
-                    <div class="col-md-4 col-sm-12 col-12" style="padding:45px;">
-                        <a href="" data-toggle="modal" data-target="#Modal1"><img src="static/card1.jpg"  style="width:130%; height:300px;"></a>
-                        <button type="button" class="add-cart add1">Add product</button>
+                    <div class="col-md-4 col-sm-12 col-12">
+                        <img src="static/card1.jpg" width="150px" height="150px">
+                        <br>
+                        product 1 - <strong>1000kr</strong>
+                        <br>
+                        <button class="btn btn-danger my-cart-btn add-cart add1" data-id="1" data-name="product 1" data-summary="summary 1" data-price="10" data-quantity="1" data-image="static/card1.jpg">Add to Cart</button>
+                        <a href="#" class="btn btn-info" data-toggle="modal" data-target="#Modal1">Details</a>
                     </div>
                     <div class="col-md-4 col-12 text-center">
-                        <h2 class="my-md-3 site-title" > <a href="" data-toggle="modal" data-target="#Modal2" > <img src="static/card2.jpg"  style="width:80%; height:300px;"> </h2> </a>
-                        <button type="button" class="add-cart add2">Add product</button>
+                        <img src="static/card2.jpg" width="150px" height="150px">
+                        <br>
+                        product 2 - <strong>1500kr</strong>
+                        <br>
+                        <button class="btn btn-danger my-cart-btn add-cart add2" data-id="2" data-name="product 2" data-summary="summary 2" data-price="20" data-quantity="1" data-image="static/card2.jpg">Add to Cart</button>
+                        <a href="#" class="btn btn-info" data-toggle="modal" data-target="#Modal2">Details</a>
                     </div>
-                    <h3>Weights</h3>
                     <div class="col-md-4 col-12 text-center">
-                        <h2 class="my-md-3 site-title" > <a href="" data-toggle="modal" data-target="#Modal3" > <img src="static/weight1.jpg"  style="width:80%; height:300px;"> </h2> </a>
-                        <button type="button" class="add-cart add3">Add product</button>
+                        <img src="static/weight1.jpg" width="150px" height="150px">
+                        <br>
+                        product 3 - <strong>300kr</strong>
+                        <br>
+                        <button class="btn btn-danger my-cart-btn add-cart add3" data-id="3" data-name="product 3" data-summary="summary 3" data-price="30" data-quantity="1" data-image="static/weight1.jpg">Add to Cart</button>
+                        <a href="#" class="btn btn-info" data-toggle="modal" data-target="#Modal3">Details</a>
                     </div>
 
                     <div class="col-md-4 col-12 text-center">
-                        <h2 class="my-md-3 site-title" > <a href="" data-toggle="modal" data-target="#Modal4" > <img src="static/weight2.jpg"  style="width:80%; height:300px;"> </h2> </a>
-                        <button type="button" class="add-cart add4">Add product</button>
+                        <img src="static/weight2.jpg" width="150px" height="150px">
+                        <br>
+                        product 4 - <strong>440kr</strong>
+                        <br>
+                        <button class="btn btn-danger my-cart-btn add-cart add4" data-id="4" data-name="product 4" data-summary="summary 4" data-price="40" data-quantity="1" data-image="static/weight2.jpg">Add to Cart</button>
+                        <a href="#" class="btn btn-info" data-toggle="modal" data-target="#Modal4">Details</a>
                     </div>
                     
                 </div>
@@ -301,5 +334,3 @@
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     </body>
 </html>
-
-

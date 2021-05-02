@@ -24,65 +24,53 @@
             .dropdown-menu{
                 background-color: red;
             }
-
-            /* .product {
-                width: 45%;
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                padding: 10px 0;
-                border-bottom: 1px solid lightgray;
-            } */
         </style>
     </head>
     <body>
         <!-- HEADER -->
         <header>
-            <!-- FIRST PIECE -->
-            <div class="salgsbanner" style="margin-bottom: 0px; background-color: #ffbd00; padding:2px;">
-                <h5 style="text-align: center;">20% ON ALL PRODUCTS</h5>
-            </div>
-            <!-- SECOND PIECE -->
-            <div class="container">
-                <div class="row">  
-                    <div class="col-md-4 col-sm-12 col-12" style="padding:45px;">
-                        <h4>Welcome to our webshop!</h4>
-                        <!-- <button class="btn"><i class="fa fa-bars"></i>hehe</button> -->
-                    </div>
-                    <div class="col-md-4 col-12 text-center">
-                        <h2 class="my-md-3 site-title" > <img src="static/logow.png" width="400" height="90"/> </h2>
-                    </div>
-                    <div class="col-md-4 col-12 text-right">
-                        <p class="my-md-4 header-links">
-                            <!-- IKONEEEER -->
-                            <a href="/login"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                            </svg>Logg inn/ Registrer deg</a>
-                            <li class="cart">
-                                <a href="cart.html">
-                                    <ion-icon name="basket"></ion-icon>Cart<span>0</span>
-                                </a>
-                            </li>
-                        </p>
-                    </div>
+          <!-- FIRST PIECE -->
+         <div class="salgsbanner" style="margin-bottom: 0px; background-color: #ffbd00; padding:2px;">
+             <h5 style="text-align: center;">Welcome to our webshop!</h5>
+         </div>
+         <!-- SECOND PIECE -->
+         <div class="container">
+             <div class="row">  
+                 <div class="col-md-4 col-sm-12 col-12">
+                      <h2 class="my-md-3 site-title" > <img src="static/logow.png" width="300" height="90"/> </h2>
+                     <!-- <button class="btn"><i class="fa fa-bars"></i>hehe</button> -->
+                 </div>
+                 <div class="col-md-4 col-12 text-right">
+                     <p class="my-md-4 header-links">
+                         <!-- IKONEEEER -->
+                         <a href="/login" style="color:black;"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                             <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                         </svg>Logg inn/ Registrer deg</a>
+                         <li class="cart">
+                             <a href="/shoppingcart" style="color:black;">
+                                 <ion-icon name="basket"></ion-icon>Cart<span>0</span>
+                             </a>
+                         </li>
+                     </p>
+                 </div>
 
-                </div>
-            </div>
-
-            <nav class="navbar navbar-expand-md navbar-light bg-light">
-                
-                <ul class="navbar-nav" style="padding-left:20px;">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Company</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="kontakt">Customer service</a>
-                    </li>
-                </ul>
-            </nav>
+             </div>
+         </div>
+         <!--navbar-->
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+             <h4>Navbar</h4>
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"></span>
+               </button>
+             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+               <div class="navbar-nav">
+                 <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+                 <a class="nav-item nav-link" href="">Company</a>
+                 <a class="nav-item nav-link" href="kontakt">Customer Service</a>
+                 
+               </div>
+             </div>
+           </nav>
         </header>
         
         <main>
@@ -111,10 +99,11 @@
                   </tr>
                 </thead>
                 <tbody class="products">
-                
+                  
                 </tbody>
             </table>
 
+            <a href="checkout"><button type="button" class="proceedcheckout">Proceed to Checkout</button></a>
 
         </main>
         <footer class="bg-light text-center text-lg-start" style="margin-top:5%;">
@@ -164,6 +153,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="{{ url_for('static', filename='js/mainn.js')}}"></script>
+    
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     </body>
 </html>
