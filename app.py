@@ -6,15 +6,11 @@ def index():
     return render_template('index.html')
     #return ("hello world")
 
-@app.route('/kontakt')
-def kontaktOss():
-    return render_template('kontaktOss.html')
+@app.route('/customer')
+def customer():
+    return render_template('customerservice.html')
     #return ("hello world")
 
-@app.route('/test')
-def test():
-    return render_template('test.html')
-    #return ("hello world")
 
 @app.route('/checkout')
 def checkout():
