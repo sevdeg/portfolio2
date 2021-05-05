@@ -41,7 +41,7 @@ for x in mycursor:
 '''
 #ADD DATABASE
 
-#THE API
+#THE APII
 
 app = Flask(__name__)
 
