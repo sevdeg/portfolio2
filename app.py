@@ -4,7 +4,7 @@ import time
 
 time.sleep(30)
 
-db = mysql.connector.connect(
+db=mysql.connector.connect(
     host="database",
     user="root",
     passwd="admin",
@@ -14,28 +14,37 @@ db = mysql.connector.connect(
 mycursor = db.cursor()
 
 try:
-    mycursor.execute("CREATE TABLE Person1 (name VARCHAR(50),age smallint UNSIGNED, personID int PRIMARY KEY AUTO_INCREMENT)")
+    mycursor.execute("CREATE TABLE Person1 (name VARCHAR(50), age smallint UNSIGNED, personID int PRIMARY KEY AUTO_INCREMENT)")
 except mysql.connector.Error as err:
     print("Something went wrong: {}".format(err))
 
-# mycursor.execute("SHOW DATABASES")
-# l = mycursor.fetchall()
-# print (l)
-
-# mycursor.execute("INSERT INTO Person (name,age) VALUES (%s,%s)", ("heihei",13))
 db.commit()
-# # for x in mycursor:
-# #     print(x)
-# # mycursor.execute("CREATE DATABASE testdatabase")
-# # from flask_sqlalchemy import SQLAlchemy
+'''
+db = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    passwd="2000Oguz",
+    database="webshop_database"
+    )
 
+mycursor = db.cursor()
+#mycursor.execute("CREATE TABLE Person(name VARCHAR(50), age smallint UNSIGNED, personID int PRIMARY KEY AUTO_INCREMENT)")
 
+#mycursor.execute("INSERT INTO Person (name,age) VALUES(%s,%s)",("Tim",19))
+#db.commit()
+mycursor.execute("SELECT * FROM Person")
+myresult=mycursor.fetchall()
 
+for x in mycursor:
+    print(x)
 
+'''
+#ADD DATABASE
+
+#THE API
 
 app = Flask(__name__)
 
-# #ADD DATABASE
 
 @app.route('/')
 def index():
@@ -72,3 +81,4 @@ def login():
     
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0")
+    #db.close()
