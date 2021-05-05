@@ -125,7 +125,7 @@ function visHandlekurv(){
                 <tr class="product">
                     <td>
                         <ion-icon name="basket"></ion-icon>
-                        <img src="./static/card1.jpg"  style="width:40px; height=40px;">
+                        <img src="./static/card1.jpg" style="width:40px; height=40px;">
                         <span>${item.name} </span>
                     </td>
                     <td class="price">${item.price},00 kr</td>
