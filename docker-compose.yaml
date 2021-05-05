@@ -17,8 +17,4 @@ services:
     networks:
       - app-network
 networks:
-<<<<<<< HEAD
   app-network:
-=======
-  app-network:
->>>>>>> 107760734dfdb9ed4463877d11bd3aec3e41500c
