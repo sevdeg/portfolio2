@@ -1,5 +1,41 @@
 from flask import Flask, render_template
+import mysql.connector
+import time
+
+time.sleep(30)
+
+db = mysql.connector.connect(
+    host="database",
+    user="root",
+    passwd="admin",
+    database="testdatabase"
+)
+
+mycursor = db.cursor()
+
+try:
+    mycursor.execute("CREATE TABLE Person1 (name VARCHAR(50),age smallint UNSIGNED, personID int PRIMARY KEY AUTO_INCREMENT)")
+except mysql.connector.Error as err:
+    print("Something went wrong: {}".format(err))
+
+# mycursor.execute("SHOW DATABASES")
+# l = mycursor.fetchall()
+# print (l)
+
+# mycursor.execute("INSERT INTO Person (name,age) VALUES (%s,%s)", ("heihei",13))
+db.commit()
+# # for x in mycursor:
+# #     print(x)
+# # mycursor.execute("CREATE DATABASE testdatabase")
+# # from flask_sqlalchemy import SQLAlchemy
+
+
+
+
+
 app = Flask(__name__)
+
+# #ADD DATABASE
 
 @app.route('/')
 def index():
@@ -31,6 +67,8 @@ def shoppingcart():
 def login():
     return render_template('loggInn.html')
     #return ("hello world")
+
+
     
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0")
