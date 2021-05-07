@@ -124,21 +124,9 @@ db.create_all()
 def index():
     return render_template('index.html')
 
-<<<<<<< HEAD
-@app.route('/kontakt')
-def kontaktOss():
-    return render_template('kontaktOss.html')
-    #return ("hello world")
-
-@app.route('/test')
-def test():
-    return render_template('test.html')
-    #return ("hello world")
-=======
 @app.route('/customer')
 def customer():
     return render_template('customerservice.html')
->>>>>>> 75444da392492a6f02990eb36bcfc2d2e9a4b370
 
 @app.route('/checkout')
 def checkout():
@@ -151,12 +139,6 @@ def shoppingcart():
 @app.route('/login')
 def login():
     return render_template('loggInn.html')
-<<<<<<< HEAD
-    #return ("hello world")
-
-
-=======
->>>>>>> 75444da392492a6f02990eb36bcfc2d2e9a4b370
     
 @app.route('/register')
 def register():
@@ -164,7 +146,3 @@ def register():
   
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0")
-<<<<<<< HEAD
-    #db.close()
-=======
->>>>>>> 75444da392492a6f02990eb36bcfc2d2e9a4b370
