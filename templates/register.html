@@ -107,70 +107,106 @@
         
         <main>
 
-            <main>
-                <div class="container contact-form">
-                    <h1 style="text-align: center;">Register form</h1>
-                    <hr>
-    
-                    <!-- <div class="row">
-                        <div class="col-md-4 offset-md-4">-->
-                    <form name="contactform" method="post" class="needs-validation" novalidate-id="forms"> 
-                        <!-- Navn -->
-                        <div class="form-group row" style="margin-bottom: 5px;">
-                            <label for="firstname" class="col-sm-1 col-form-label">Fornavn</label>
-                            <div class="col-sm-10">
-                                <input name="fname" type="text" class="form-control" id="inpFornavn" autocomplete="off" required="" placeholder="Suhail">
-                                <!-- <div class="invalid-feedback">
-                                    Please enter your first name
-                                </div> -->
-                            </div>
-                        </div>
-                        
-                        <!-- Email -->
-                        <div class="form-group row">
-                            <label for="lastname" class="col-sm-1 col-form-label" style="margin-bottom: 5px;">Etternavn</label>
-                            <div class="col-sm-10">
-                                <input name="lname" type="text" class="form-control" placeholde="Hansen" id="inpEtternavn" autocomplete="off" required="" placeholder="Hansen">
-                                <!-- <div class="invalid-feedback">
-                                    Please enter your email adress
-                                </div> -->
-                            </div>
-                        </div>
+         
+                
+                <!-- DEL 2 ------------------------ -->
+                
+<!--         DENNE FUNGERER UTEN FORM
+                 
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h1>INNDATA</h1>
+                        <hr>
 
-                        <div class="form-group row">
-                            <label for="inputEmail" class="col-sm-1 col-form-label" >Email</label>
-                            <div class="col-sm-10">
-                                <input name="email" type="email" class="form-control" placeholde="blabla@blabla.com" id="inpEmail" autocomplete="off" required="" placeholder="blabla@hotmail.com">
-                                <!-- <div class="invalid-feedback">
-                                    Please enter your email adress
-                                </div> -->
+                        <div class="mb-3">
+                            <div class="form-group">
+                                <label>Message</label>
+                                <input class="form-control" id="inpNavn" cols="30" rows="3" placeholder="Enter your message" required></input>
                             </div>
-                        </div>
 
-
-                        <div class="form-group row">
-                            <label for="pwd" class="col-sm-1 col-form-label" style="margin-bottom: 5px;">Password</label>
-                            <div class="col-sm-10">
-                                <input name="password" type="password" class="form-control" id="inpPassword" autocomplete="off" required="" placeholder="Type your password">
-                                <!-- <div class="invalid-feedback">
-                                    Please enter your email adress
-                                </div> -->
+                            <div class="form-group">
+                                <label>Message</label>
+                                <textarea class="form-control" id="inpMessage" cols="30" rows="3" placeholder="Enter your message" required></textarea>
                             </div>
+
+                            <button class="btn btn-primary" onclick="submit_entry();">Leave message</button>
                         </div>
-                        
-                        <!-- Melding -->
-                      
-                        <div class="form-group row">
-                            <button type="submit" class="btn btn-primary col-sm-1" style="margin-top: 30px; margin-left: 110px;" >
-                                Opprett konto
-                            </button>
-                        </div>   
-                    </form>    
+                    </div>
                 </div>
-                
-                
-            </main>
+            </div>
+        -->
+
+
+
+
+<!--  FUNGERER MED FORM -> UTVID I NESTE MED FLERE INPUTS
             
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h1>INNDATA</h1>
+                        <hr>
+
+                        <div class="mb-3">
+                            <form class="form" id="registerForm"> 
+                                <div class="form-group">
+                                    <label>Message</label>
+                                    <input class="form-control" id="inpNavn" cols="30" rows="3" placeholder="Enter your message" required></input>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Message</label>
+                                    <textarea class="form-control" id="inpMessage" cols="30" rows="3" placeholder="Enter your message" required></textarea>
+                                </div>
+
+                                <button type="submit">Leave message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>   -->
+
+
+            
+ 
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h1>INNDATA</h1>
+                        <hr>
+
+                        <div class="mb-3">
+                            <form class="form" id="registerForm"> 
+                                <div class="form-group">
+                                    <label>Fornavn</label>
+                                    <input class="form-control" name="fname" id="inpFornavn" placeholder="Suhail" required></input>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Etternavn</label>
+                                    <input name="lname" class="form-control" id="inpEtternavn" placeholder="oguz" required></input>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input name="email" class="form-control" type="email" id="inpEmail" placeholder="suhail_konge@hotmail.com" required></input>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Passord</label>
+                                    <input name="pwd" type="password" class="form-control" id="inpPassord" placeholder="Type your password" required></input>
+                                </div>
+
+                                <button type="submit">Create account</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+
 
         </main>
         <footer class="bg-light text-center text-lg-start" style="margin-top:5%;">
@@ -219,5 +255,134 @@
     
     <script src="{{ url_for('static', filename='js/mainn.js')}}"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+        
+    <script>
+        //DEL 1 -------------------------------------------------------
+        // HENGER MED DEL 2 OVER -> FUNGERER
+        // function submit_entry(){
+        //     var innNavn = document.getElementById('inpNavn');
+        //     var innMessage = document.getElementById('inpMessage');
+        
+        //     var entry = {
+        //         innNavn: innNavn.value,
+        //         innMessage: innMessage.value
+        //     };
+
+        //     fetch(`${window.origin}/register/create-entry`, {
+        //         method: "POST",
+        //         credentials: "include",
+        //         body: JSON.stringify(entry),
+        //         cache: "no-cache",
+        //         headers: new Headers({
+        //             "content-type": "application/json"
+        //         })
+        //     })
+        //     .then(function (response){
+        //         if(response.status !== 200){
+        //             console.log(`Response status was not 200: ${response.status}`);
+        //             return;
+        //         }
+        //         response.json().then(function(data){
+        //             console.log(data)
+        //         })
+        //     })
+        // }
+        
+
+
+         //DEL 2 ------------------------------------------------------------ fungerer med form
+        // const myForm = document.getElementById('registerForm');
+        // var innNavn = document.getElementById('inpNavn');
+        // var innMessage = document.getElementById('inpMessage');
+        // console.log("leser");
+        // myForm.addEventListener('submit', function(e){
+        //     console.log("Trukket");
+        //     e.preventDefault();
+
+           
+        //     var entry = {
+        //         innNavn: innNavn.value,
+        //         innMessage: innMessage.value
+        //     };
+            
+
+           
+        //     fetch(`${window.origin}/register/create-entry`, {
+        //         method: "POST",
+        //         credentials: "include",
+        //         body: JSON.stringify(entry),
+        //         cache: "no-cache",
+        //         headers: new Headers({
+        //             "content-type": "application/json"
+        //         })
+        //     })
+        //     .then(function (response){
+        //         if(response.status !== 200){
+        //             console.log(`Response status was not 200: ${response.status}`);
+        //             return;
+        //         }
+        //         response.json().then(function(data){
+        //             console.log(data)
+        //         })
+        //     })
+        // })
+
+
+
+
+
+        //DEL 2 -> denne kan du teste videre med 
+
+        //Hente ut alle input.values
+        const myForm = document.getElementById('registerForm');
+        var innFornavn = document.getElementById('inpFornavn');
+        var innEtternavn = document.getElementById('inpEtternavn');
+        var innEmail = document.getElementById('inpEmail');
+        var innPassord = document.getElementById('inpPassord');
+        console.log("leser");
+
+        //Utfør operasjon-> trykk på knapp
+        myForm.addEventListener('submit', function(e){
+            console.log("Trukket");
+            e.preventDefault();
+
+           
+            var entry = {
+                innFornavn: innFornavn.value,
+                innEtternavn: innEtternavn.value,
+                innEmail: innEmail.value,
+                innPassord: innPassord.value
+            };
+
+            console.log(entry);
+            
+
+           
+            fetch(`${window.origin}/register/create-entry`, {
+                method: "POST",
+                credentials: "include",
+                body: JSON.stringify(entry),
+                cache: "no-cache",
+                headers: new Headers({
+                    "content-type": "application/json"
+                })
+            })
+            .then(function (response){
+                if(response.status !== 200){
+                    console.log(`Response status was not 200: ${response.status}`);
+                    return;
+                }
+                response.json().then(function(data){
+                    console.log(data)
+                })
+            })
+        })
+        
+
+
+       
+
+    </script>
     </body>
 </html>

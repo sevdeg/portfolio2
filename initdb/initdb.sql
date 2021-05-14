@@ -1,1 +1,2 @@
-CREATE DATABASE testdatabase;
+-- CREATE DATABASE testdatabase;
+
