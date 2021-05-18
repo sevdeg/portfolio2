@@ -152,3 +152,53 @@ function visHandlekurv(){
 
 oppdaterHandlekurv();
 visHandlekurv();
+
+var id_token = null;
+
+function onSignIn(googleUser) {
+    var profile = googleUser.getBasicProfile();
+    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+    console.log('Name: ' + profile.getName());
+    console.log('Image URL: ' + profile.getImageUrl());
+    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+
+   //have Better storage? local storage funker for flere tab
+    id_token = googleUser.getAuthResponse().id_token;
+    console.log(`ID Token to pass to server: ${id_token}`)
+
+    logged_in = profile;
+    
+    //image = profile.getImageUrl().split("=")[0]
+  } 
+
+  function signOut(){
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+      logged_in = null;
+      //remove_users();
+      //load_users();
+    });
+    id_token = null;
+  }
+  
+function danger_return(data){
+    console.log("Authenticated request returned");
+    console.log(data);
+}
+
+function danger(){
+    console.log("Danger!");
+    if(id_token == null){
+        alert("ILLEGAL ACCESS ATTEMPT REGISTERED");
+        return;
+    }
+
+    fetch("/login", {
+        method: "GET",
+        method: {
+            'Authorization' : id_token
+        }
+    }).then(response => response.json())
+    .then(data => danger_return(data));
+}
